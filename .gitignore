@@ -1,3 +1,13 @@
+# User Settings
+
+pyclopedia/p04_cookbook
+pyclopedia/p05_ext
+pyclopedia/p06_development
+
+pyclopedia.egg-info/
+source/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
