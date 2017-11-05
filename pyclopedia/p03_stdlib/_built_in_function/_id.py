@@ -9,8 +9,10 @@ ref:
 """
 
 import copy
+from pyclopedia.deco import run_if_is_main
 
 
+@run_if_is_main(__name__)
 def immutable_object():
     """
     """
@@ -26,13 +28,16 @@ def immutable_object():
 immutable_object()
 
 
+@run_if_is_main(__name__)
 def mutable_object():
     l1 = [1, 2]
     l2 = l1
     l3 = list(l1)
+    l4 = copy.copy(l1)
 
     assert id(l1) == id(l2)
     assert id(l1) != id(l3)
+    assert id(l1) != id(l4)
 
 
 mutable_object()

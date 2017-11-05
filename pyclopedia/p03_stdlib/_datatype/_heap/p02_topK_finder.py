@@ -10,6 +10,7 @@ import time
 import random
 import string
 from heapq import *
+from pyclopedia.deco import run_if_is_main
 
 
 def create_test_data():
@@ -34,6 +35,7 @@ def heap_topK(iterable, n, key, reverse=False):
         return nsmallest(n, iterable, key=key)
 
 
+@run_if_is_main(__name__)
 def performance_heap_find_topK():
     """测试使用堆排序解决topK问题。
 
@@ -54,11 +56,9 @@ def performance_heap_find_topK():
     elapsed2 = time.clock() - st
 
     # heap always faster than manual sort
-#     print("heap topK elapse %.6f seconds" % elapsed1)
-#     print("sorted topK elapse %.6f seconds" % elapsed2)
+    #     print("heap topK elapse %.6f seconds" % elapsed1)
+    #     print("sorted topK elapse %.6f seconds" % elapsed2)
     assert res1 == res2
 
 
-#--- Unittest ---
-if __name__ == "__main__":
-    performance_heap_find_topK()
+performance_heap_find_topK()

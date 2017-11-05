@@ -19,6 +19,7 @@ def mod(int_a, int_b):
     if isinstance(int_a, int) and isinstance(int_b, int):
         return int_a % int_b
 
+
 mod2 = partial(mod, int_b=2)
 mod2.__doc__ = "mod 2"
 mod10 = partial(mod, int_b=10)

@@ -37,6 +37,7 @@ def wrap_and_fill():
     print("-" * 80)
     print(textwrap.fill(text, width=80))
 
+
 wrap_and_fill()
 
 
@@ -57,6 +58,7 @@ for i in range(10):
     dedented_text = textwrap.dedent(indented_text)
     print(dedented_text)
 
+
 indent_and_dedent()
 
 
@@ -66,5 +68,6 @@ def shorten():
     print(textwrap.shorten("Hello  world!", width=12))
     print(textwrap.shorten("Hello  world!", width=11))
     print(textwrap.shorten("Hello  world!", width=10, placeholder="..."))
+
 
 shorten()

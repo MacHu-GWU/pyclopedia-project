@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import itertools
 import operator
+import collections
+from itertools import *
 
 
 def take(n, iterable):

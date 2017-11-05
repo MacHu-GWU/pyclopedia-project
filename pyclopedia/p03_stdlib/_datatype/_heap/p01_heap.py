@@ -9,8 +9,10 @@ from __future__ import print_function, unicode_literals
 import time
 import random
 from heapq import *
+from pyclopedia.deco import run_if_is_main
 
 
+@run_if_is_main(__name__)
 def performance_ordered_list():
     """测试堆在用于实现有序列表时的性能。
 
@@ -44,11 +46,15 @@ def performance_ordered_list():
     elapsed2 = time.clock() - st
 
     # heap always faster than manual sort
-#     print("heap takes %.6f sec." % elapsed1)
-#     print("sort takes %.6f sec." % elapsed2)
+    #     print("heap takes %.6f sec." % elapsed1)
+    #     print("sort takes %.6f sec." % elapsed2)
     assert elapsed1 < elapsed2
 
 
+performance_ordered_list()
+
+
+@run_if_is_main(__name__)
 def performance_sort():
     """测试堆排序和Python内置sort方法(快速排序)的性能。
 
@@ -80,11 +86,15 @@ def performance_sort():
     elapsed2 = time.clock() - st
 
     # heap sort is slower
-#     print("heap sort takes %.6f sec." % elapsed1)
-#     print("list sort takes %.6f sec." % elapsed2)
+    #     print("heap sort takes %.6f sec." % elapsed1)
+    #     print("list sort takes %.6f sec." % elapsed2)
     assert elapsed1 > elapsed2
 
 
+performance_sort()
+
+
+@run_if_is_main(__name__)
 def performance_topK():
     """测试堆在求top K问题中的性能。
     """
@@ -107,13 +117,9 @@ def performance_topK():
     elapsed2 = time.clock() - st
 
     # heap top K is faster
-#     print("heap topk takes %.6f sec." % elapsed1)
-#     print("sort takes %.6f sec." % elapsed2)
+    #     print("heap topk takes %.6f sec." % elapsed1)
+    #     print("sort takes %.6f sec." % elapsed2)
     assert elapsed1 < elapsed2
 
 
-#--- Unittest ---
-if __name__ == "__main__":
-    performance_ordered_list()
-    performance_sort()
-    performance_topK()
+performance_topK()

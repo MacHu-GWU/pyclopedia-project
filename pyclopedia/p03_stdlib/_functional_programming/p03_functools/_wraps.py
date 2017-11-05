@@ -39,6 +39,7 @@ def my_func():
     """This is docstring for my_func."""
     return
 
+
 assert my_func() == {"result": None}
 
 assert my_func.__name__ == "my_func"

@@ -9,8 +9,10 @@ Reference: http://blog.csdn.net/lisonglisonglisong/article/details/38573269
 
 from __future__ import print_function, unicode_literals
 import copy
+from pyclopedia.deco import run_if_is_main
 
 
+@run_if_is_main(__name__)
 def common_in_shallow_and_deep_copy():
     """演示了shallow copy和deep copy的相同之处。
     """
@@ -24,6 +26,10 @@ def common_in_shallow_and_deep_copy():
     assert "a" in d  # "a"在d中并没有被删除
 
 
+common_in_shallow_and_deep_copy()
+
+
+@run_if_is_main(__name__)
 def difference_in_shallow_and_deep_copy():
     """演示了shallow copy和deep copy的不同之处。
 
@@ -46,8 +52,4 @@ def difference_in_shallow_and_deep_copy():
     assert "a1" in d["a"]  # "a1"在d中并没有被删除
 
 
-#--- Unittest ---
-if __name__ == "__main__":
-    common_in_shallow_and_deep_copy()
-    difference_in_shallow_and_deep_copy()
-    print("Complete!")
+difference_in_shallow_and_deep_copy()

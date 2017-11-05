@@ -1,12 +1,9 @@
 # User Settings
-
-pyclopedia/p04_cookbook
-pyclopedia/p05_ext
-pyclopedia/p06_development
-
+pyclopedia_venv/
 pyclopedia.egg-info/
-source/
-
+pyclopedia-*/
+docs/source/pyclopedia/
+index.rst
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -53,6 +53,7 @@ def _(arg, verbose=False):
 def nothing(arg, verbose=False):  # if first argument is None
     print("Nothing.")
 
+
 fun.register(type(None), nothing)
 
 fun(1, verbose=True)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-""""
+"""
 Math operator, 数学计算操作符。
 """
 

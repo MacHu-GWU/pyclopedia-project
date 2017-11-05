@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Static Method and Class Method
+==============================================================================
+- Static method always take the instance it self as first argument.
+- Class method always take the Class of the instance as first argument.
+"""
+
 
 class Calculator(object):
     # staticmethod没有self作为第一个变量, 本质上就是一个普通的函数。
@@ -11,7 +18,6 @@ class Calculator(object):
 
 
 class User(object):
-
     def __init__(self, name=None, **kwargs):
         self.name = name
 

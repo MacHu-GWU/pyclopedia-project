@@ -11,16 +11,16 @@ ref:
 """
 
 try:
-    # Normal execution block
+    # Normal code block
     pass
-except ExceptionA:
-    # Exception A handle
+except TypeError:
+    # Exception 1 handle
     pass
-except ExceptionB:
-    # Exception B handle
+except ValueError:
+    # Exception 2 handle
     pass
-except:
-    # Other exception handle
+except Exception as e:
+    # Other exception handle, for example ``raise e``
     pass
 else:
     # if no exception, get here

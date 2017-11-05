@@ -1,14 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Dict Methods
+==============================================================================
+"""
+
 import time
+from pyclopedia.deco import run_if_is_main
 
 keys = ["n%s" for i in range(1000000)]
 
 
+@run_if_is_main(__name__)
 def fromkeys():
-    """dict.fromkeys is a very fast way to initial a dict that all keys 
-    map to the same value. But the value should not be a mutable value if 
+    """dict.fromkeys is a very fast way to initial a dict that all keys
+    map to the same value. But the value should not be a mutable value if
     you will edit the value.
     """
     st = time.clock()
@@ -25,6 +32,7 @@ def fromkeys():
 fromkeys()
 
 
+@run_if_is_main(__name__)
 def get():
     """Try to get one item, if key not exist, then return default value.
     """
@@ -37,6 +45,7 @@ def get():
 get()
 
 
+@run_if_is_main(__name__)
 def setdefault():
     """Try to set one item, if key exist, then do nothing.
     """
@@ -50,6 +59,7 @@ def setdefault():
 setdefault()
 
 
+@run_if_is_main(__name__)
 def update():
     d = dict(a=1, b=1)
     d.update(dict(b=2, c=3))
