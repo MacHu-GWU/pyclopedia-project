@@ -405,4 +405,6 @@ publish: dev_dep ## ** Publish This Library to PyPI
 .PHONY: notebook
 notebook: ## ** Run jupyter notebook
 	${BIN_PIP} install jupyter
+	${BIN_PIP} install jupyter_contrib_nbextensions
+	${BIN_JUPYTER} contrib nbextension install --user
 	${BIN_JUPYTER} notebook
