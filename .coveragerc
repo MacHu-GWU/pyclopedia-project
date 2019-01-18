@@ -3,7 +3,8 @@
 [run]
 omit =
     pyclopedia/pkg/*
-    pyclopedia/zzz_ezinstall.py
+    pyclopedia/docs/*
+    pyclopedia/tests/*
 
 [report]
 # Regexes for lines to exclude from consideration
